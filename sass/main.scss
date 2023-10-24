@@ -1,10 +1,13 @@
 @import "./abstracts/variable";
 @import "./abstracts/mixin";
 @import "./base/base";
+@import "./typhography/heading";
 @import "./animations/pulsate";
 @import "./components/list";
 @import "./components/paragraph";
 @import "./components/recommend";
+@import "./components/notification";
+@import "./components/chat";
 @import "./layout/container";
 @import "./layout/header";
 @import "./layout/sidebar";

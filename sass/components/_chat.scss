@@ -1,0 +1,76 @@
+.chat {
+  @include dropdown-properties;
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s;
+    background-color: var(--dropdown-background);
+    height: 50vh;
+    width: 40rem;
+    transform: translateX(-50%);
+    box-shadow: 0 1rem 3rem var(--shadow-dark);
+    border-radius: 5px;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    gap: 2rem;
+  }
+
+  &__body {
+    height: 100%;
+    padding: 1rem;
+    background-color: #ddd;
+    background-size: cover;
+    border-radius: 3px;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__item {
+    padding: 0.75rem 0.75rem 1rem 0.75rem;
+    max-width: 40%;
+    color: white;
+    &--service {
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        calc(100% - 5px) calc(100% - 5px),
+        0 calc(100% - 5px)
+      );
+      border-radius: 5px 5px 0px 10px;
+      background-color: var(--color-primary-light);
+    }
+    &--user {
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 5px),
+        5px calc(100% - 5px),
+        0 100%
+      );
+      border-radius: 5px 5px 10px 0;
+      background-color: var(--color-grey-dark-3);
+      align-self: flex-end;
+    }
+  }
+
+  &__form {
+    &__input {
+      width: 100%;
+      outline: none;
+      border: 1px solid var(--color-grey-dark-2);
+      border-radius: 3px;
+      padding: 0.5rem 2rem;
+    }
+  }
+}
