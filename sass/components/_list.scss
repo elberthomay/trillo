@@ -1,0 +1,32 @@
+.list-column {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.5rem;
+      background-image: url("../img/chevron-thin-right.svg");
+      background-size: cover;
+      @supports ((mask-image: none) or (-webkit-mask-image: none)) {
+        background-image: none;
+        background-color: var(--color-primary);
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+      }
+    }
+
+    // @include respond(phone-small) {
+    //   flex: 0 0 100%;
+    // }
+  }
+}

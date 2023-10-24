@@ -1,0 +1,22 @@
+@mixin respond($width) {
+  @if $width == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $width == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $width == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $width == phone-small {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
+}
