@@ -7,7 +7,6 @@
     top: 90%;
     visibility: hidden;
     opacity: 0;
-    overflow: hidden;
     max-height: 50vh;
     transition: all 0.2s;
     background-color: var(--dropdown-background);
@@ -21,6 +20,10 @@
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: min-content minmax(auto, 1fr) min-content;
     gap: 0.5rem;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   & .dropdown-heading {

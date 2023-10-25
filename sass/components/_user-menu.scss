@@ -1,0 +1,58 @@
+.user-menu {
+  @include dropdown-properties;
+  &__content {
+    position: absolute;
+    right: 0;
+    top: 90%;
+    visibility: hidden;
+    padding: 1.5rem;
+    opacity: 0;
+    z-index: 5;
+    background-color: #fff;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    box-shadow: 0 1rem 2rem var(--shadow-dark);
+  }
+  &__header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  &__image {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+  }
+  &__details {
+  }
+  &__user-name {
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  &__email {
+    font-size: 1.2rem;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    &__link {
+      &,
+      &:visited,
+      &:link {
+        display: block;
+        color: black;
+        padding: 0.75rem 0;
+        text-decoration: none;
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}

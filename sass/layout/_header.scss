@@ -69,6 +69,13 @@
   align-self: stretch;
   // -webkit-box-align: center;
 
+  &__link {
+    pointer-events: none;
+    @include respond(tab-port) {
+      pointer-events: all;
+    }
+  }
+
   &__icon-box {
     position: relative;
     padding: 0 2rem;
@@ -114,13 +121,14 @@
   }
 
   &__user {
+    height: 100%;
     display: flex;
     align-items: center;
+    gap: 1.5rem;
     padding: 0 2rem;
     cursor: pointer;
     &__img {
       height: 3.75rem;
-      margin-right: 2rem;
       border-radius: 50%;
     }
 

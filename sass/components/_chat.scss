@@ -12,7 +12,7 @@
     background-color: var(--dropdown-background);
     height: 50vh;
     width: 40rem;
-    transform: translateX(-50%);
+    transform: translateX(-75%);
     box-shadow: 0 1rem 3rem var(--shadow-dark);
     border-radius: 5px;
     padding: 1.5rem;
@@ -20,6 +20,10 @@
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     gap: 2rem;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__body {
